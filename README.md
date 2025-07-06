@@ -11,8 +11,6 @@
 
 
 **Team Name:** AI’m Fine  
-**Sprint Report:** Sprint 1  
-**Report Type:** Agile Project Documentation  
 
 ---
 
