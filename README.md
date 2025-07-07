@@ -92,6 +92,10 @@ Educators can monitor students’ case analyses and clinical assessments, provid
 ## SPRINT 1 
 
 ### App Screenshots
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/Screenshot%202025-07-07%20223333.png)
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/Screenshot%202025-07-07%20223357.png)
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/Screenshot%202025-07-07%20223413.png)
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/Screenshot%202025-07-07%20223424.png)
 
 
 ### Sprint Notes
@@ -116,6 +120,9 @@ Tasks were evaluated in the range of 5–13 points according to their difficulty
 Daily Scrum meetings were conducted in writing via the WhatsApp group due to time constraints. The team shared important decisions and developments here instantly. Weekly online meetings were held via Google Meet, task sharing, design reviews and AI trials were conducted in coordination.
 
 ### Sprint Board
+
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2022.00.10_17b2890c.jpg)
+
 
 Tasks: Main work items (symptom input, AI output, recommendation system, etc.)  
 File Goals: Model goals, technical task descriptions  
