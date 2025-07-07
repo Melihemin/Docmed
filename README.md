@@ -119,6 +119,15 @@ Tasks were evaluated in the range of 5–13 points according to their difficulty
 
 Daily Scrum meetings were conducted in writing via the WhatsApp group due to time constraints. The team shared important decisions and developments here instantly. Weekly online meetings were held via Google Meet, task sharing, design reviews and AI trials were conducted in coordination.
 
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.10_34f42592.jpg)
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.10_461efdf6.jpg)
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.10_cba20bca.jpg)
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.11_0c46c4ee.jpg)
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.11_7153e3e2.jpg)
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.11_d89f0503.jpg)
+![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2022.00.10_17b2890c.jpg)
+
+
 ### Sprint Board
 
 ![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2022.00.10_17b2890c.jpg)
