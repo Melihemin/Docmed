@@ -125,7 +125,6 @@ Daily Scrum meetings were conducted in writing via the WhatsApp group due to tim
 ![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.11_0c46c4ee.jpg)
 ![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.11_7153e3e2.jpg)
 ![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.11_d89f0503.jpg)
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2022.00.10_17b2890c.jpg)
 
 
 ### Sprint Board
