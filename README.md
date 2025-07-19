@@ -234,28 +234,42 @@ Python + NLP	AI model experimentation and symptom processing
 ### Sprint Notes
 
 •	The patient page was updated to improve user flow and interface clarity.
+
 •	Page routing and navigation logic was implemented to enable smooth transitions between patient, doctor, and student interfaces.
+
 •	FastAPI was successfully integrated for backend communication and API handling.
+
 • A comparative analysis of AI models was conducted to evaluate performance and suitability for symptom interpretation.
+
 •	Personalized interface enhancements were implemented based on user type (patient, doctor, student).
+
 •	Initial work has begun on the database setup, including planning of data structure and schema design.
+
 •	A team member, Hatice, left the project. İclal took over organizational coordination responsibilities and now serves as the Scrum Master.
 
 ### Sprint Board
 
 • Patient page design improvements
+
 • Page routing and navigation logic implemented
+
 • FastAPI backend integration
+
 • Research and comparison of AI model candidates
+
 • Personalized user experience enhancements in UI
 
 
 ### Sprint Review
 
 •	FastAPI integration enabled real-time interaction between the frontend and backend.
+
 •	UI modifications allowed better role-based personalization.
+
 •	Page routing logic was tested and confirmed to work correctly across modules.
+
 •	AI model comparisons informed the final selection to be implemented in the next sprint.
+
 •	The updated team structure increased clarity in responsibilities and planning.
 
 ### Estimated score to be completed within the sprint
