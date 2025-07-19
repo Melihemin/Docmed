@@ -1,5 +1,3 @@
-# YTZA - Bootcamp 
-
 ## Team Members
 
 |       | Collaborators             | Roles           | Socials                                                                                         | GitHub                                                                                           |
@@ -236,3 +234,89 @@ Python + NLP	AI model experimentation and symptom processing
 •	Integrate AI model into frontend via API  
 •	Set up database to store patients, reports, and student responses  
 •	Conduct prompt testing and optimization (30–40 prompt variants)  
+
+## SPRINT 2 
+
+### Sprint Notes
+
+•	The patient page was updated to improve user flow and interface clarity.
+•	Page routing and navigation logic was implemented to enable smooth transitions between patient, doctor, and student interfaces.
+•	FastAPI was successfully integrated for backend communication and API handling.
+• A comparative analysis of AI models was conducted to evaluate performance and suitability for symptom interpretation.
+•	Personalized interface enhancements were implemented based on user type (patient, doctor, student).
+•	Initial work has begun on the database setup, including planning of data structure and schema design.
+•	A team member, Hatice, left the project. İclal took over organizational coordination responsibilities and now serves as the Scrum Master.
+
+### Sprint Board
+
+• Patient page design improvements
+• Page routing and navigation logic implemented
+• FastAPI backend integration
+• Research and comparison of AI model candidates
+• Personalized user experience enhancements in UI
+
+
+### Sprint Review
+
+•	FastAPI integration enabled real-time interaction between the frontend and backend.
+•	UI modifications allowed better role-based personalization.
+•	Page routing logic was tested and confirmed to work correctly across modules.
+•	AI model comparisons informed the final selection to be implemented in the next sprint.
+•	The updated team structure increased clarity in responsibilities and planning.
+
+### Estimated score to be completed within the sprint
+
+100 points
+
+### Updated UI – Doktor-Patient Page
+
+![](https://github.com/user-attachments/assets/8a3cad14-6449-4d07-8f8b-6bbace3b3da3)
+
+
+### Daily Scrum
+
+Daily Scrum meetings were conducted in writing via the WhatsApp group due to time constraints. The team shared important decisions and developments here instantly. Weekly online meetings were held via Google Meet, task sharing, design reviews and AI trials were conducted in coordination.
+
+![](https://github.com/user-attachments/assets/e0790cdb-243e-4c45-abaa-efea8de81842)
+![](https://github.com/user-attachments/assets/611f18c7-83a3-4f94-bea9-75d65228a1c6)
+![](https://github.com/user-attachments/assets/ff36c195-6164-41d9-8abe-65b53cca95ba)
+![](https://github.com/user-attachments/assets/4bf4d076-6695-412c-bdbf-26c4f46db5c6)
+![](https://github.com/user-attachments/assets/5b5cd965-03af-4106-98c8-2aac2ddb9661)
+![](https://github.com/user-attachments/assets/70d8bfb9-4dc6-4ae5-be8f-62023ade167a)
+![](https://github.com/user-attachments/assets/22e54a96-808f-4d4a-9359-c838a3881220)
+![](https://github.com/user-attachments/assets/d3936c6a-17f4-41a8-80f0-7e0009326021)
+![](https://github.com/user-attachments/assets/1fe1092d-9470-451c-a08a-35720adcdb7d)
+![](https://github.com/user-attachments/assets/0c7fb8d7-3ee4-4d7c-a521-f9a17cbd988d)
+![](https://github.com/user-attachments/assets/4442882b-b783-4e4f-9200-28e0e62f6a93)
+![](https://github.com/user-attachments/assets/03970eca-51db-4319-b32e-ca13d7f18b81)
+![](https://github.com/user-attachments/assets/2848fe6b-5ba1-47fe-99a2-6d4d6ad84e5f)
+![](https://github.com/user-attachments/assets/6efbd5ce-3b39-4e40-8457-cb28ed4a6b47)
+
+### Sprint Retrospective
+
+**What's Going Well:**
+
+•	Clear division of tasks and increased productivity with FastAPI integration
+•	Smooth redistribution of responsibilities after the team change
+•	Interface and routing improvements enhanced overall user experience
+
+**Needs Improvement:**
+
+•	Model integration needs to be prioritized and finalized in Sprint 3
+•	Database structure and testing still pending
+
+## Tools Used
+
+Trello	Task tracking and sprint planning
+WhatsApp	Daily team communication
+Google Meet	Team meetings
+FastAPI	Backend API development and integration
+Google Docs	Meeting notes 
+
+### Ready for Sprint 3
+
+•	Finalize AI model integration
+•	Implement database and begin storing patient data
+•	Conduct system-wide testing and error handling
+•	Continue frontend feature development and UI refinements
+
