@@ -117,13 +117,7 @@ Tasks were evaluated in the range of 5–13 points according to their difficulty
 
 Daily Scrum meetings were conducted in writing via the WhatsApp group due to time constraints. The team shared important decisions and developments here instantly. Weekly online meetings were held via Google Meet, task sharing, design reviews and AI trials were conducted in coordination.
 
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.10_34f42592.jpg)
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.10_461efdf6.jpg)
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.10_cba20bca.jpg)
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.11_0c46c4ee.jpg)
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.11_7153e3e2.jpg)
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/WhatsApp%20Image%202025-07-07%20at%2021.57.11_d89f0503.jpg)
-
+Chat History Links: https://github.com/Melihemin/OptiMend-AI/tree/main/Daily%20Scrum
 
 ### Sprint Board
 
@@ -277,32 +271,22 @@ Python + NLP	AI model experimentation and symptom processing
 
 Daily Scrum meetings were conducted in writing via the WhatsApp group due to time constraints. The team shared important decisions and developments here instantly. Weekly online meetings were held via Google Meet, task sharing, design reviews and AI trials were conducted in coordination.
 
-![](https://github.com/user-attachments/assets/e0790cdb-243e-4c45-abaa-efea8de81842)
-![](https://github.com/user-attachments/assets/611f18c7-83a3-4f94-bea9-75d65228a1c6)
-![](https://github.com/user-attachments/assets/ff36c195-6164-41d9-8abe-65b53cca95ba)
-![](https://github.com/user-attachments/assets/4bf4d076-6695-412c-bdbf-26c4f46db5c6)
-![](https://github.com/user-attachments/assets/5b5cd965-03af-4106-98c8-2aac2ddb9661)
-![](https://github.com/user-attachments/assets/70d8bfb9-4dc6-4ae5-be8f-62023ade167a)
-![](https://github.com/user-attachments/assets/22e54a96-808f-4d4a-9359-c838a3881220)
-![](https://github.com/user-attachments/assets/d3936c6a-17f4-41a8-80f0-7e0009326021)
-![](https://github.com/user-attachments/assets/1fe1092d-9470-451c-a08a-35720adcdb7d)
-![](https://github.com/user-attachments/assets/0c7fb8d7-3ee4-4d7c-a521-f9a17cbd988d)
-![](https://github.com/user-attachments/assets/4442882b-b783-4e4f-9200-28e0e62f6a93)
-![](https://github.com/user-attachments/assets/03970eca-51db-4319-b32e-ca13d7f18b81)
-![](https://github.com/user-attachments/assets/2848fe6b-5ba1-47fe-99a2-6d4d6ad84e5f)
-![](https://github.com/user-attachments/assets/6efbd5ce-3b39-4e40-8457-cb28ed4a6b47)
+Chat History Link: https://github.com/Melihemin/OptiMend-AI/tree/main/Daily%20Scrum
 
 ### Sprint Retrospective
 
 **What's Going Well:**
 
 •	Clear division of tasks and increased productivity with FastAPI integration
+
 •	Smooth redistribution of responsibilities after the team change
+
 •	Interface and routing improvements enhanced overall user experience
 
 **Needs Improvement:**
 
 •	Model integration needs to be prioritized and finalized in Sprint 3
+
 •	Database structure and testing still pending
 
 ## Tools Used
@@ -316,7 +300,10 @@ Google Docs	Meeting notes
 ### Ready for Sprint 3
 
 •	Finalize AI model integration
+
 •	Implement database and begin storing patient data
+
 •	Conduct system-wide testing and error handling
+
 •	Continue frontend feature development and UI refinements
 
