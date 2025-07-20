@@ -276,6 +276,11 @@ Python + NLP	AI model experimentation and symptom processing
 
 100 points
 
+### Score Completion Logic
+
+Although task points were not explicitly labeled on the Trello board, the estimated workload for this sprint was evaluated to be around 100 points based on the scope and difficulty of the completed tasks. The estimation was made using general effort and time spent on each task such as FastAPI integration, UI improvements, and routing logic. Tasks were organized via Trello lists including “Tasks”, “Frontend Backlogs”, and “File Goals”.
+
+
 ### Updated UI – Doktor-Patient Page
 
 ![](https://github.com/user-attachments/assets/8a3cad14-6449-4d07-8f8b-6bbace3b3da3)
