@@ -249,6 +249,9 @@ Python + NLP	AI model experimentation and symptom processing
 
 ### Sprint Board
 
+<img width="1144" height="802" alt="Ekran Resmi 2025-07-20 17 37 25" src="https://github.com/user-attachments/assets/409dc094-fec3-49e7-9733-1bdcc99a8b27" />
+
+
 • Patient page design improvements
 
 • Page routing and navigation logic implemented
