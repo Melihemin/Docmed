@@ -1,6 +1,10 @@
-# Docmed
+# Team Name: AI’m Fine 
 
-## Demo
+## Product Description
+
+Docmed is a web-based healthcare support platform that leverages artificial intelligence to facilitate the flow of medical information between patients, doctors, and educators or students. The system utilizes natural language processing techniques to translate patients’ self-expressed symptoms into medical terminology, and determines each case’s urgency level through an AI-powered triage mechanism. In this way, doctors receive concise and meaningful reports that accelerate diagnostic and intervention processes. The platform also automatically identifies and labels rare medical cases for educational purposes; this dual-purpose approach both eases the workload of doctors and enables medical students and educators to perform interactive AI-assisted analyses on rare cases and receive instant feedback. All data is securely stored in the system database. DiagnoAI aims to modernize doctor–patient communication and enhance healthcare education with smart Technologies
+
+## DemoVideo
 
 
 https://github.com/user-attachments/assets/0d3e0e80-88a1-4bd6-a52f-6b1b9f7609a8
@@ -8,179 +12,112 @@ https://github.com/user-attachments/assets/0d3e0e80-88a1-4bd6-a52f-6b1b9f7609a8
 https://www.youtube.com/watch?v=gDzbwd2oFyo
 
 
-## [TR] 
-
-# 🧠 Docmed
-
-**Docmed**, FastAPI ve yapay zekâ destekli bir hasta-doktor iletişim ve eğitim platformudur. Gerçek kimlik doğrulaması, yapay zekâ destekli tanı sistemi ve doktorlar için eğitim simülasyonları içerir.
-
----
-
-## 🚪 Giriş & Kayıt
-
-- 🔒 **Gerçek TC Kimlik doğrulaması** algoritması kullanılır. Sahte girişler engellenir.
-- 🍪 Cookie desteği sayesinde sonraki girişlerde kullanıcıya kolaylık sağlanır.
-- 📥 Kayıt olurken kullanıcıların TC Kimlik Numarası doğrulanır.
-
----
-
-## 🤒 Hasta Arayüzü
-
-- 🗣️ Kullanıcılar semptomlarını serbest biçimde yazabilir.
-- 📩 Semptomlar doğrudan doktorun sistemine iletilir.
-- ⏳ Hasta, doktorun çağırmasını bekler.
-
----
-
-## 🩺 Doktor Paneli
-
-- 📃 Tüm hastaların listesine erişim.
-- 🧠 Her hasta için:
-  - Yapay zekâdan alınan **hastalık başlığı**
-  - **Açıklama ve yorumlar**
-  - Olası hastalıklar ve **% ihtimaller**
-  - **Önerilen ilaçlar**
-  - Genel tedavi **tavsiyeleri**
-- 📄 Tek tuşla **rapor oluşturma** özelliği
-
----
-
-## 🗃️ Kayıt Sistemi
-
-- Tüm veriler kayıt altına alınır:
-  - Kullanıcı bilgisi
-  - Semptom açıklaması
-  - Tanı başlığı
-  - Yapay zekâ çıktıları
-  - Tedavi planı ve önerilen ilaçlar
-
----
-
-## 🎓 Eğitim Platformu
-
-- 👨‍⚕️ Doktorlara özel eğitim paneli
-- 🧪 Alan ve zorluk seviyesine göre **vaka seçimi**
-- 📊 Her vaka için:
-  - Verilen ilaçlar
-  - AI tavsiyeleri
-  - Doktorların uyguladığı tedavi yolları
-  - Olası tanılar ve istatistiksel dağılım
-
----
-
-## 🚀 Teknolojiler
-
-- **FastAPI** & **SQLAlchemy**
-- **Google Generative AI** (Gemini API)
-- **Cookie tabanlı oturum yönetimi**
-- **Yapay zekâ destekli sağlık tahmini**
-
----
-
-> Sağlıkta dijital dönüşüm: **Docmed** ile hem teşhis hem eğitim bir arada.
-
-![WhatsApp Image 2025-07-29 at 23 16 40_e1d412c2](https://github.com/user-attachments/assets/3f5a5de9-a72c-447c-8a45-7cfdf38556e5)
-
-![WhatsApp Image 2025-07-29 at 23 13 35_5e4b57c5](https://github.com/user-attachments/assets/21e111a6-e7fb-414e-922f-0a6e2e47b809)
-
 ## Team Members
 
 
 |       | Collaborators             | Roles           | Socials                                                                                         | GitHub                                                                                           |
 |-------|----------------------------|------------------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| <img src="https://lh3.googleusercontent.com/a/ACg8ocJ4CyEWbr63AMTA-ioGNBeAEC-46ppEm7d7O32ce5RYKwVK4j8SqA=s432-c-no" width="100" height="100"> | Melih Emin Kılıçoğlu | Developer    | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/linkedin.png" width="100" height="100">](https://www.linkedin.com/in/melihemin/) | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/github.png" width="100" height="100">](https://github.com/Melihemin) |
+| <img src="https://lh3.googleusercontent.com/a/ACg8ocJ4CyEWbr63AMTA-ioGNBeAEC-46ppEm7d7O32ce5RYKwVK4j8SqA=s432-c-no" width="100" height="100"> | Melih Emin Kılıçoğlu | Product Owner & Developer    | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/linkedin.png" width="100" height="100">](https://www.linkedin.com/in/melihemin/) | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/github.png" width="100" height="100">](https://github.com/Melihemin) |
 | <img src="https://github.com/Melihemin/OptiMend-AI/blob/main/team_information/iclal_aca.jpg" width="100" height="100"> | İclal Aca | Developer & Scrum Master   | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/linkedin.png" width="100" height="100">](https://www.linkedin.com/in/iclal-aca/	) | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/github.png" width="100" height="100">](https://github.com/iclalaca) |
 | <img src="https://github.com/Melihemin/OptiMend-AI/blob/main/team_information/hatice_sanli.jpg" width="100" height="100"> | Hatice Şanlı  | Developer & Scrum Master | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/linkedin.png" width="100" height="100">](https://github.com/Melihemin/OptiMend-AI/blob/main/team_information/hatice_sanli.jpg) | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/github.png" width="100" height="100">](https://www.linkedin.com/in/hatice-%C5%9Fanl%C4%B1-539066266/) |
-| <img src="https://github.com/Melihemin/OptiMend-AI/blob/main/team_information/nergiz_alici.jpg" width="100" height="100"> | Nergiz Alıcı  | Developer | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/linkedin.png" width="100" height="100">](https://www.linkedin.com/in/nergiz-al%C4%B1ci/) | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/github.png" width="100" height="100">](https://github.com/nergizal) |
+| <img src="https://github.com/Melihemin/OptiMend-AI/blob/main/team_information/nergiz_alici.jpg" width="100" height="100"> | Nergiz Alıcı  | Developer & Scrum Master| [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/linkedin.png" width="100" height="100">](https://www.linkedin.com/in/nergiz-al%C4%B1ci/) | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/github.png" width="100" height="100">](https://github.com/nergizal) |
 
 
-# Team Name: AI’m Fine 
 
-## Product Description
 
-DiagnoAI is a web-based healthcare support platform that leverages artificial intelligence to facilitate the flow of medical information between patients, doctors, and educators or students. The system utilizes natural language processing techniques to translate patients’ self-expressed symptoms into medical terminology, and determines each case’s urgency level through an AI-powered triage mechanism. In this way, doctors receive concise and meaningful reports that accelerate diagnostic and intervention processes. The platform also automatically identifies and labels rare medical cases for educational purposes; this dual-purpose approach both eases the workload of doctors and enables medical students and educators to perform interactive AI-assisted analyses on rare cases and receive instant feedback. All data is securely stored in the system database. DiagnoAI aims to modernize doctor–patient communication and enhance healthcare education with smart Technologies
+## 🚀 Product Features
 
-## Product Features 
+### 🔐 1. Login & Registration System
 
-### 1. User Login and Registration Page
+**Overview:** This is the main entry point for all users. Patients, doctors, and students/educators can sign up and log in based on their role.
 
-•	Description: This is the main entry page where new users (patients, doctors, students/educators) can register and existing users can log in.  
-•	Features:  
-- Secure login with email and password  
-- Role selection: Patient, Doctor, Student/Educator  
-- Password reset and acceptance of privacy agreement  
-- Input validation to ensure data quality  
-- Progressive redirection to the appropriate user interface based on user role  
+**Features:**
+- Secure authentication with ID
+- Role-based access: Patient, Doctor, or Student/Educator
+- Password recovery and privacy agreement acceptance
+- Input validation for data accuracy
+- Smart redirection to relevant dashboard after login
+- ID number validation algorithm
 
-### 2. Patient Module – Symptom Entry and Triage Page
+---
 
-•	Description: The page where patients enter their personal details (such as age, gender, existing conditions) and describe their symptoms in free text.  
-•	Features:  
-- Free-text input for symptoms with user-friendly form fields and auto-suggestions  
-- NLP-based text processing infrastructure  
-- AI-generated pre-diagnosis and triage report (classifying urgency as green/yellow/red)  
-- Display of AI-generated reports in summary and table form to the patient  
-- Automatic storage of all user input and AI reports in the system database  
+### 🧑‍⚕️ 2. Patient Module – Symptom Entry & AI Triage
 
-### 3. Doctor Module – Case Monitoring and Evaluation Page
+**Overview:** Patients provide personal information and describe their symptoms freely. The system processes this data using AI and NLP.
 
-•	Description: A management panel where doctors can view the case reports assigned to them or accessible in general, and can add their evaluations.  
-•	Features:  
-- Listing of all case applications in a summary table (with anonymized ID, submission time, triage color, etc.)  
-- Ability to view detailed reports generated by AI as well as the patient's self-expressed narrative  
-- Free-form area for the doctor to add diagnosis and notes  
-- Ability to update the case status (e.g., “Closed”, “Reviewed”)  
-- Filtering and sorting by urgency, date, and other relevant criteria  
+**Features:**
+- Free-text symptom entry with smart suggestions
+- NLP-based translation from layman terms to medical language
+- AI-generated triage report: Green / Yellow / Red urgency
+- Summary and tabular report views available instantly
+- All data securely saved in the system database
 
-### 4. Student/Educator Module – Education and Evaluation Page
+---
 
-•	Description: Rare and educational cases automatically identified by AI are presented here to students and educators for interactive clinical thinking and automated feedback.  
-•	Features:  
-- Special list of rare cases, assigned to students for analysis  
-- Students can submit their diagnoses, differential diagnosis, and reasoning for each case  
-- Automated, AI-driven evaluation of the student’s submissions with instant feedback  
-- Educators can monitor student performance and, if needed, add manual comments or grade assignments  
-- Supplementary educational materials and guidance notes are provided on relevant cases  
+### 🩺 3. Doctor Module – Case Overview & Evaluation
 
-### 5. General and Auxiliary Pages
+**Overview:** Doctors can access a dashboard listing all relevant cases and perform evaluations supported by AI insights.
 
-•	Notification Panel: Instant system notifications and feedback related to AI results, doctor assessments, and other relevant actions.  
-•	FAQ and Support: Frequently asked questions, user guides, and a support request form for users.  
-•	Account Information: Page for updating user profile, changing password, and managing personal information.  
+**Features:**
+- Case summaries with anonymized IDs, timestamps, and triage levels
+- Full AI report + patient’s own narrative
+- Diagnosis input field and doctor’s notes section
+- Status management: Reviewed, Closed, On Hold, etc.
+- Filtering and sorting by urgency, date, and more
 
-## Core Functionalities (Platform-Wide)
+---
 
-•	Data Security and Privacy Compliance: All user data is securely encrypted and stored in accordance with necessary legal regulations and privacy policies.  
-•	AI-Driven Natural Language Processing (NLP): NLP and machine learning play an active role throughout the patient, student, and doctor modules.  
-•	High Accessibility & Responsive Design: All pages are designed for smooth and seamless use across multiple devices and screen sizes.  
-•	Clear and Intelligent Reporting: The platform delivers detailed yet easily understandable reports for both users and healthcare professionals.  
+### 🎓 4. Education Module – Clinical Thinking & Feedback
 
-## Target Audience
+**Overview:** Rare, educational cases are automatically selected by the system and assigned to students for analysis and feedback.
 
-### 1. Patients
+**Features:**
+- Rare case library tailored for educational use
+- Student input for diagnosis and differential reasoning
+- Real-time AI evaluation and scoring
+- Educator dashboard to track student progress
+- Supplementary learning notes and clinical hints
 
-DiagnoAI enables patients to easily enter their symptoms into the system and quickly receive a preliminary evaluation of their condition. This facilitates safer and more informed access to healthcare services.
+---
 
-### 2. Doctors
+### 📚 5. Support & Utilities
 
-Doctors can review AI-generated, summarized, and prioritized case reports, allowing them to manage diagnosis and intervention processes more efficiently. This improves decision-making speed and effectiveness, even in high-demand settings.
+**Features:**
+- 🔔 Notification Panel: Real-time updates and alerts
+- ❓ FAQ & Help Center: User guide and support form
+- 👤 Profile & Settings: Password change, profile management
 
-### 3. Medical Students
+---
 
-Medical students have the opportunity to enhance their clinical reasoning and diagnostic skills through interactive work with rare and real-life cases. The platform aims to enrich students’ medical knowledge and hands-on experience.
+## 🧩 Core System Highlights
 
-### 4. Educators
+- 🔐 **Data Privacy & Compliance:** Encrypted data, GDPR-compliant storage
+- 🤖 **AI + NLP Integration:** Drives all major modules
+- 📱 **Responsive UI:** Optimized for all screen sizes
+- 📊 **Simplified Reporting:** Clean and understandable insights for all users
 
-Educators can monitor students’ case analyses and clinical assessments, providing instant feedback and guidance. This makes the educational process more measurable and effective.
+---
 
-## SPRINT 1 
+## 🎯 Target Users
 
-### App Screenshots
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/Screenshot%202025-07-07%20223333.png)
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/Screenshot%202025-07-07%20223357.png)
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/Screenshot%202025-07-07%20223413.png)
-![](https://github.com/Melihemin/OptiMend-AI/blob/main/Daily%20Scrum/Screenshot%202025-07-07%20223424.png)
+### 👨‍⚕️ Patients
+Easily describe symptoms, receive instant AI triage, and seamlessly connect with doctors.
 
+### 🧑‍⚕️ Doctors
+Access AI-prioritized reports, evaluate cases quickly, and optimize clinical decisions.
+
+### 🧑‍🎓 Medical Students
+Analyze real and rare cases, sharpen diagnostic reasoning, and get AI feedback.
+
+### 👩‍🏫 Educators
+Track student evaluations, provide feedback, and enhance clinical education through data-driven monitoring.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3f5a5de9-a72c-447c-8a45-7cfdf38556e5" width="45%" />
+  <img src="https://github.com/user-attachments/assets/21e111a6-e7fb-414e-922f-0a6e2e47b809" width="45%" />
+</p>
+
+# SPRINT 1 
 
 ### Sprint Notes
 
@@ -315,7 +252,7 @@ Python + NLP	AI model experimentation and symptom processing
 •	Set up database to store patients, reports, and student responses  
 •	Conduct prompt testing and optimization (30–40 prompt variants)  
 
-## SPRINT 2 
+# SPRINT 2 
 
 ### Sprint Notes
 
