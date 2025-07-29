@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ disase.title }} | Vaka Detayı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            background: #f7fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #2563eb 100%);
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(26,54,93,0.07);
+        }
+        .header-container {
+            max-width: 1200px; margin: 0 auto; padding: 20px 24px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo-section { display: flex; align-items: center; gap: 16px; }
+        .logo {
+            width: 48px; height: 48px; background: rgba(255,255,255,0.15); border-radius: 8px;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+        }
+        .brand-text h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 2px;}
+        .brand-text p { font-size: 0.95rem; opacity: 0.9; margin: 0;}
+        .header-info { display: flex; align-items: center; gap: 24px; font-size: 0.95rem;}
+        .info-item { display: flex; align-items: center; gap: 8px; opacity: 0.95;}
+        .main-content {
+            max-width: 900px; margin: 32px auto 0 auto; background: #fff; border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(26,54,93,0.08); padding: 32px 28px 32px 28px;
+        }
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 8px; color: #2563eb;
+            background: #f7fafc; border: 1px solid #3182ce; border-radius: 7px;
+            padding: 7px 18px; font-weight: 500; text-decoration: none; margin-bottom: 30px; transition: 0.2s;
+        }
+        .back-btn:hover { background: #e6f0fa; color: #1a365d; }
+        .vaka-header {
+            display: flex; align-items: flex-start; gap: 26px; margin-bottom: 32px;
+        }
+        .vaka-image {
+            width: 100px; height: 100px; object-fit: cover; border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(26,54,93,0.10); background: #f1f1f1; flex-shrink: 0;
+        }
+        .vaka-title-box {
+            flex: 1;
+        }
+        .vaka-title-box h2 { font-size: 2.1rem; font-weight: 700; margin: 0 0 8px 0; color: #1a365d;}
+        .badges { display: flex; gap: 12px; margin-top: 8px; }
+        .badge { display: inline-block; padding: 6px 16px; border-radius: 20px; font-size: 0.97rem; font-weight: 500;}
+        .badge.level1 { background: #e6f4ea; color: #38a169;}
+        .badge.level2 { background: #fdf6b2; color: #d69e2e;}
+        .badge.level3, .badge.level4, .badge.level5 { background: #fdeaea; color: #e53e3e;}
+        .badge.area-green { background: #e6f4ea; color: #38a169;}
+        .badge.area-yellow { background: #fdf6b2; color: #d69e2e;}
+        .badge.area-red { background: #fdeaea; color: #e53e3e;}
+
+        /* Sekmeler */
+        .tabs { display: flex; gap: 18px; border-bottom: 2px solid #e2e8f0; margin-bottom: 28px; }
+        .tab-btn {
+            padding: 12px 26px 10px 26px; background: none; border: none;
+            font-size: 1rem; font-weight: 500; color: #1a365d; cursor: pointer; border-radius: 8px 8px 0 0;
+            transition: 0.2s;
+        }
+        .tab-btn.active, .tab-btn:hover { background: #f7fafc; color: #2563eb; border-bottom: 3px solid #3182ce;}
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        /* Timeline */
+        .timeline { position: relative; margin-left: 18px; margin-top: 12px;}
+        .timeline::before {
+            content: ''; position: absolute; left: 12px; top: 0; bottom: 0; width: 3px; background: #cbd5e0; border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative; margin-bottom: 30px; padding-left: 40px;
+        }
+        .timeline-item:last-child { margin-bottom: 0;}
+        .timeline-dot {
+            position: absolute; left: 0; top: 8px; width: 18px; height: 18px; background: #2563eb;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.1rem; box-shadow: 0 1px 6px #4a90e222;
+        }
+        .timeline-title { font-weight: 600; color: #1a365d; margin-bottom: 2px;}
+        .timeline-desc { color: #2d3748; font-size: 1.04rem; }
+        .footer { background: #1a202c; color: #fff; padding: 24px 0; text-align: center; margin-top: 44px;}
+
+        /* Rapor butonları */
+        .rapor-btns { display: flex; gap: 14px; margin-bottom: 15px; }
+        .rapor-btn {
+            background: #3182ce; color: #fff; border: none; border-radius: 7px; padding: 9px 22px;
+            font-size: 1rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 9px;
+            transition: 0.2s;
+        }
+        .rapor-btn:hover { background: #2563eb; }
+        @media (max-width: 650px) {
+            .main-content {padding: 10px 3vw;}
+            .header-container, .vaka-header {flex-direction: column; gap: 10px;}
+            .vaka-title-box h2 {font-size: 1.25rem;}
+            .tabs {gap: 2px;}
+            .tab-btn {padding: 10px 6vw 10px 6vw;}
+        }
+    </style>
+    <script>
+        // Tab kontrolü
+        function switchTab(tabIndex) {
+            let btns = document.querySelectorAll('.tab-btn');
+            let tabs = document.querySelectorAll('.tab-content');
+            btns.forEach((b, i) => b.classList.toggle('active', i === tabIndex));
+            tabs.forEach((t, i) => t.classList.toggle('active', i === tabIndex));
+        }
+        window.onload = function() { switchTab(0); }
+        function printSection() { window.print(); }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Tıbbi Vaka Yönetim Sistemi</h1>
+                    <p>Profesyonel Doktor Eğitim Platformu</p>
+                </div>
+            </div>
+            <div class="header-info">
+                <div class="info-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Bugün: {{ current_date }}</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-database"></i>
+                    <span>{{count}} Vaka</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <!-- Geri Dön & Yazdır -->
+        <div class="rapor-btns">
+            <a href="/edu" class="back-btn"><i class="fas fa-arrow-left"></i>Vakalara Dön</a>
+            <button onclick="printSection()" class="rapor-btn"><i class="fas fa-print"></i> Raporu Yazdır</button>
+        </div>
+        <!-- Vaka Başlığı ve Resmi -->
+        <div class="vaka-header">
+
+            <div class="vaka-title-box">
+                <h2>{{ disase.title }}</h2>
+                <div class="badges">
+                    <span class="badge area-{{ disase.area }}">{{ disase.area|capitalize }}</span>
+                    <span class="badge level{{ disase.level }}">Zorluk: {{ disase.level }}</span>
+                </div>
+                <div style="color:#718096; font-size:1.02rem; margin-top:7px;">Hasta No: <b>{{ disase.user_id }}</b></div>
+            </div>
+        </div>
+
+        <!-- Sekmeler -->
+        <div class="tabs">
+            <button class="tab-btn" onclick="switchTab(0)">Vaka Akışı</button>
+            <button class="tab-btn" onclick="switchTab(1)">Tedavi & Reçete</button>
+            <button class="tab-btn" onclick="switchTab(2)">Doktor Notu & Rapor</button>
+        </div>
+
+        <!-- Timeline Tab -->
+        <div class="tab-content">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-info-circle"></i></div>
+                    <div class="timeline-title">Vaka Özeti</div>
+                    <div class="timeline-desc">{{ disase.description }}</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-vial"></i></div>
+                    <div class="timeline-title">Tanı İhtimalleri</div>
+                    <div class="timeline-desc">{{ disase.possbility or disase.possibility }}</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-notes-medical"></i></div>
+                    <div class="timeline-title">Klinik Notlar</div>
+                    <div class="timeline-desc">{{ disase.klinik_note if disase.klinik_note else "–" }}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tedavi & Reçete Tab -->
+        <div class="tab-content">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-pills"></i></div>
+                    <div class="timeline-title">Kullanılan İlaçlar</div>
+                    <div class="timeline-desc">{{ disase.medicines }}</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-syringe"></i></div>
+                    <div class="timeline-title">Tedavi Protokolü</div>
+                    <div class="timeline-desc">{{ disase.treatment if disase.treatment else "–" }}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doktor Notu & Rapor Tab -->
+        <div class="tab-content">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-user-md"></i></div>
+                    <div class="timeline-title">Doktor Tavsiyesi</div>
+                    <div class="timeline-desc">{{ disase.advice }}</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-file-medical-alt"></i></div>
+                    <div class="timeline-title">Kapsamlı Rapor</div>
+                    <div class="timeline-desc">{{ disase.rapor if disase.rapor else "Buraya doktorun hazırladığı kapsamlı rapor, öneri ve izlem notları otomatik gelir." }}</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

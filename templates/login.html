@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasta Girişi - Docmed Healthcare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            color: white;
+            padding: 10px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #64748B;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #1e40af;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #1e40af;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: #64748B;
+        }
+
+        .appointment-btn {
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .appointment-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="3" fill="%233b82f6" opacity="0.1"/><circle cx="800" cy="300" r="2" fill="%231e40af" opacity="0.1"/><circle cx="400" cy="700" r="4" fill="%233b82f6" opacity="0.1"/><circle cx="700" cy="800" r="2" fill="%231e40af" opacity="0.1"/></svg>') no-repeat;
+            background-size: cover;
+        }
+
+        .login-container {
+            background: white;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            position: relative;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #1e40af);
+            border-radius: 24px 24px 0 0;
+        }
+
+        .login-icon {
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 30px;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4); }
+            100% { box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3); }
+        }
+
+        .login-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .login-subtitle {
+            color: #64748B;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+            font-size: 0.95rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9CA3AF;
+            font-size: 1.1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 18px 20px 18px 52px;
+            border: 2px solid #E5E7EB;
+            border-radius: 16px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #F9FAFB;
+            font-family: inherit;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .form-input.error {
+            border-color: #EF4444;
+            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+        }
+
+        .login-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .button-text {
+            transition: opacity 0.3s ease;
+        }
+
+        .button-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .login-btn.loading .button-text {
+            opacity: 0;
+        }
+
+        .login-btn.loading .button-loading {
+            opacity: 1;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 20px;
+            display: none;
+            font-weight: 500;
+        }
+
+        .message.show {
+            display: block;
+            animation: slideInUp 0.3s ease;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.success {
+            background: #F0FDF4;
+            color: #166534;
+            border: 1px solid #BBF7D0;
+        }
+
+        .message.error {
+            background: #FEF2F2;
+            color: #DC2626;
+            border: 1px solid #FECACA;
+        }
+
+        .register-link {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid #E5E7EB;
+            text-align: center;
+        }
+
+        .register-link a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .register-link a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #1e40af);
+            transition: width 0.3s ease;
+            z-index: 1000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .login-container {
+                padding: 30px;
+                margin: 20px;
+            }
+
+            .login-title {
+                font-size: 1.8rem;
+            }
+
+            .main-content {
+                padding: 40px 20px;
+            }
+            
+            
+        }
+          .footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            text-align: center;
+            color: #64748B;
+            border-top: 1px solid #E5E7EB;
+            font-size: 0.9rem;
+        }
+        
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 25px;
+            }
+            
+            .form-input, .login-btn {
+                padding: 16px 18px 16px 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                Docmed
+            </a>
+
+
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="login-container">
+            <div class="login-icon">
+                <i class="fas fa-hospital-user"></i>
+            </div>
+            <h1 class="login-title">Hasta Girişi</h1>
+            <p class="login-subtitle">Randevu sistemi için giriş yapın</p>
+
+            <form id="login-form" novalidate>
+                <div class="form-group">
+                    <label for="id_number">TC Kimlik Numarası</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-id-card input-icon"></i>
+                        <input 
+                            type="text" 
+                            id="id_number" 
+                            name="id_number" 
+                            class="form-input" 
+                            placeholder="11 haneli TC kimlik numarası"
+                            required 
+                            maxlength="11" 
+                            pattern="[0-9]{11}" 
+                            autocomplete="off"
+                            inputmode="numeric"
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" id="login-button" class="login-btn">
+                    <span class="button-text">
+                        <i class="fas fa-sign-in-alt" style="margin-right: 8px;"></i>
+                        Giriş Yap
+                    </span>
+                    <div class="button-loading">
+                        <div class="spinner"></div>
+                    </div>
+                </button>
+
+                <div class="message" id="message"></div>
+            </form>
+            
+            <div class="register-link">
+                <p>Hesabınız yok mu? <a href="/auth/register">Kayıt Ol</a></p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        © 2025 Docmed Healthcare. All rights reserved.
+    </footer>
+    <script>
+        class LoginManager {
+            constructor() {
+                this.form = document.getElementById("login-form");
+                this.messageEl = document.getElementById("message");
+                this.loginButton = document.getElementById("login-button");
+                this.idNumberInput = document.getElementById("id_number");
+                this.progressBar = document.getElementById("progressBar");
+                
+                this.isLoading = false;
+                this.init();
+            }
+
+            init() {
+                this.attachEventListeners();
+                this.focusInput();
+            }
+
+            attachEventListeners() {
+                this.form.addEventListener("submit", (e) => this.handleSubmit(e));
+                this.idNumberInput.addEventListener('input', (e) => this.formatInput(e));
+                this.idNumberInput.addEventListener('paste', (e) => this.handlePaste(e));
+                this.idNumberInput.addEventListener('blur', () => this.validateInput());
+                
+                this.idNumberInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        this.form.dispatchEvent(new Event('submit'));
+                    }
+                });
+            }
+
+            formatInput(e) {
+                let value = e.target.value.replace(/[^0-9]/g, '');
+                if (value.length > 11) {
+                    value = value.slice(0, 11);
+                }
+                e.target.value = value;
+                
+                if (e.target.classList.contains('error')) {
+                    e.target.classList.remove('error');
+                }
+            }
+
+            handlePaste(e) {
+                e.preventDefault();
+                const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+                const numericOnly = pastedText.replace(/[^0-9]/g, '').slice(0, 11);
+                this.idNumberInput.value = numericOnly;
+            }
+
+            validateTCNumber(tcNumber) {
+                if (!tcNumber || tcNumber.length !== 11 || !/^\d{11}$/.test(tcNumber)) {
+                    return false;
+                }
+                
+                if (tcNumber[0] === '0') {
+                    return false;
+                }
+
+                try {
+                    const digits = tcNumber.split('').map(Number);
+                    const sum = digits.slice(0, 10).reduce((acc, digit) => acc + digit, 0);
+                    return sum % 10 === digits[10];
+                } catch {
+                    return false;
+                }
+            }
+
+            validateInput() {
+                const value = this.idNumberInput.value.trim();
+                
+                if (!value) {
+                    this.showInputError("TC kimlik numarası gereklidir");
+                    return false;
+                }
+                
+                if (value.length !== 11) {
+                    this.showInputError("TC kimlik numarası 11 haneli olmalıdır");
+                    return false;
+                }
+                
+                if (!this.validateTCNumber(value)) {
+                    this.showInputError("Geçerli bir TC kimlik numarası giriniz");
+                    return false;
+                }
+                
+                this.clearInputError();
+                return true;
+            }
+
+            showInputError(message) {
+                this.idNumberInput.classList.add('error');
+                this.showMessage(message, 'error');
+            }
+
+            clearInputError() {
+                this.idNumberInput.classList.remove('error');
+            }
+
+            async handleSubmit(e) {
+                e.preventDefault();
+                
+                if (this.isLoading) return;
+                
+                const id_number = this.idNumberInput.value.trim();
+
+                if (!this.validateInput()) {
+                    return;
+                }
+
+                this.setLoading(true);
+                this.updateProgress(30);
+
+                try {
+                    const response = await fetch("/auth/token", {
+                        method: "POST",
+                        headers: { 
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        },
+                        body: JSON.stringify({ id_number }),
+                        credentials: 'same-origin'
+                    });
+
+                    this.updateProgress(70);
+
+                    if (response.redirected) {
+                        this.showMessage("Giriş başarılı! Yönlendiriliyorsunuz...", "success");
+                        this.updateProgress(100);
+                        
+                        setTimeout(() => {
+                            window.location.href = response.url || "/index";
+                        }, 1000);
+                    } else if (response.ok) {
+                        const data = await response.json();
+                        this.showMessage("Giriş başarılı! Yönlendiriliyorsunuz...", "success");
+                        this.updateProgress(100);
+                        
+                        setTimeout(() => {
+                            window.location.href = "/index";
+                        }, 1000);
+                    } else {
+                        const data = await response.json().catch(() => ({ 
+                            detail: "Giriş başarısız" 
+                        }));
+                        this.showMessage(data.detail || "Kimlik numarası bulunamadı", "error");
+                        this.resetProgress();
+                    }
+                } catch (error) {
+                    console.error("Login error:", error);
+                    this.showMessage("Sunucuya ulaşılamadı. Lütfen tekrar deneyin.", "error");
+                    this.resetProgress();
+                } finally {
+                    this.setLoading(false);
+                }
+            }
+
+            showMessage(text, type = 'info') {
+                this.messageEl.textContent = text;
+                this.messageEl.className = `message ${type} show`;
+                
+                if (type === 'success') {
+                    setTimeout(() => {
+                        this.hideMessage();
+                    }, 3000);
+                }
+            }
+
+            hideMessage() {
+                this.messageEl.classList.remove('show');
+            }
+
+            setLoading(loading) {
+                this.isLoading = loading;
+                this.loginButton.disabled = loading;
+                
+                if (loading) {
+                    this.loginButton.classList.add('loading');
+                } else {
+                    this.loginButton.classList.remove('loading');
+                }
+            }
+
+            updateProgress(percentage) {
+                this.progressBar.style.width = `${percentage}%`;
+            }
+
+            resetProgress() {
+                setTimeout(() => {
+                    this.progressBar.style.width = '0%';
+                }, 500);
+            }
+
+            focusInput() {
+                setTimeout(() => {
+                    this.idNumberInput.focus();
+                }, 100);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new LoginManager();
+        });
+
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
+    </script>
+</body>
+</html>

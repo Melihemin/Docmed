@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        /* --- Unified CSS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 100%;
+        }
+
+        body {
+            background-color: #111827;
+            color: #E5E7EB;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+        }
+
+        .container {
+            flex-grow: 1;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav, footer {
+            flex-shrink: 0;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: #9CA3AF;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav {
+            position: absolute;
+            top: 0;
+            border-bottom: 1px solid #1F2937;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            border-top: 1px solid #1F2937;
+        }
+        
+        /* --- Login Form Styles --- */
+        .login-container {
+            width: 100%;
+            max-width: 420px;
+            background-color: #1F2937;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #374151;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-icon {
+            font-size: 3rem;
+            color: #3B82F6;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-title {
+            font-size: 2rem;
+            color: #F9FAFB;
+            margin-bottom: 0.75rem;
+        }
+        
+        .login-subtitle {
+            color: #9CA3AF;
+            margin-bottom: 2.5rem;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-group .input-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6B7280;
+        }
+
+        .form-group input {
+            width: 100%;
+            background-color: #111827;
+            color: #F9FAFB;
+            font-size: 1rem;
+            padding: 14px 16px 14px 40px;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: #3B82F6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #2563EB;
+        }
+        
+        .error-message {
+            color: #EF4444;
+            background-color: rgba(239, 68, 68, 0.1);
+            border: 1px solid #EF4444;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 1.5rem;
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav">
+        Doctor Portal
+    </header>
+
+    <main class="container">
+        <div class="login-container">
+            <i class="fas fa-user-md login-icon"></i>
+            <h1 class="login-title">Doctor Access</h1>
+            <p class="login-subtitle">Enter your special access code to proceed.</p>
+
+            <form id="doctor-login-form">
+                <div class="form-group">
+                    <i class="fas fa-key input-icon"></i>
+                    <input type="password" id="doctor-code" placeholder="Your Access Code" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="error-message" id="errorMessage">
+                    Invalid access code. Please try again.
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        © 2025 Your Company
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('doctor-login-form');
+            const doctorCodeInput = document.getElementById('doctor-code');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // --- This is a mock list of valid doctor codes for demonstration ---
+            // In a real application, you would verify this against a database.
+            const validDoctorCodes = ['DOC123', 'DR-SMITH-456', 'ACCESS-789'];
+
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent the form from submitting in the traditional way
+
+                const enteredCode = doctorCodeInput.value;
+
+                // Check if the entered code is in our list of valid codes
+                if (validDoctorCodes.includes(enteredCode)) {
+                    // If the code is valid, redirect to the doctor dashboard
+                    console.log('Login successful. Redirecting...');
+                    window.location.href = 'doctor_dashboard.html'; // Make sure this path is correct
+                } else {
+                    // If the code is invalid, show an error message
+                    errorMessage.style.display = 'block';
+                    doctorCodeInput.focus();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

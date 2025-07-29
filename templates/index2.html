@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medilab - Sağlık Teknolojileri</title>
+    <!-- Font Awesome ve Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <style>
+        /* --- Temel Ayarlar ve Değişkenler --- */
+        :root {
+            --background: #0F172A; /* Gece Mavisi */
+            --surface: #1E293B;   /* Yüzey Rengi */
+            --primary: #3B82F6;   /* Ana Renk - Mavi */
+            --primary-light: #60A5FA;
+            --secondary: #10B981; /* İkincil Renk - Yeşil */
+            --text-light: #F1F5F9; /* Çok Açık Metin */
+            --text-dark: #94A3B8;  /* Koyu Metin */
+            --border: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-light);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        /* --- Gezinme Çubuğu --- */
+        .header {
+            background-color: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-left: 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-light);
+        }
+
+        .cta-button {
+            background-image: linear-gradient(to right, var(--primary), var(--primary-light));
+            color: #FFFFFF;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.25);
+            border: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
+        }
+        
+        /* --- Ana İçerik --- */
+        .section {
+            padding: 100px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-title h2 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Hero Slider */
+        .hero-slider {
+            height: 80vh;
+            width: 100%;
+            position: relative;
+        }
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+        .slide-overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+             max-width: 900px;
+             padding: 0 20px;
+        }
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 3rem;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--text-light);
+        }
+        .swiper-pagination-bullet-active {
+            background: var(--primary);
+        }
+        
+        /* Üçlü Kart Bölümü */
+        .cards-section {
+            background-color: var(--background);
+            padding-top: 60px;
+            padding-bottom: 120px;
+            margin-top: -100px; /* Hero'nun üzerine taşma efekti */
+            position: relative;
+            z-index: 2;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        .feature-item {
+            background: var(--surface);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .feature-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        .feature-item .icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 25px;
+        }
+        .feature-item h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        /* Proje Hakkında Bölümü */
+        .about-project-section {
+            background-color: var(--background);
+        }
+        .about-project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+        }
+        .about-image-container img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .about-text-container h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .about-text-container p {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .about-text-container ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        .about-text-container ul li {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .about-text-container ul li i {
+            color: var(--secondary);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Video Demo Bölümü */
+        .video-section {
+            background-color: var(--surface);
+        }
+        .video-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+        }
+        .video-player {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .video-player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .video-text h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .video-text p {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Doktorlar Bölümü */
+        .doctor-card {
+            background-color: var(--surface);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+        .doctor-card:hover {
+             transform: translateY(-5px) scale(1.02);
+             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+             border-color: var(--primary);
+        }
+        .doctor-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+        }
+        .doctor-info h4 {
+            font-size: 1.4rem;
+            color: var(--text-light);
+        }
+        .doctor-info span {
+            font-size: 1rem;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .doctor-info p {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--surface);
+            padding: 80px 20px 40px;
+            border-top: 1px solid var(--border);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 50px;
+        }
+        .footer-col h4 {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        .footer-col p, .footer-col a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+            transition: color 0.3s ease;
+        }
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            color: var(--text-dark);
+        }
+
+        /* Duyarlılık */
+        @media (max-width: 768px) {
+            .nav-links, .cta-button { display: none; }
+            .mobile-nav-toggle { display: block; }
+            .hero-title { font-size: 2.8rem; }
+            .cards-section { margin-top: 0; }
+            .hero-slider { height: 60vh; padding-top: 0; }
+            .video-content, .about-project-content { grid-template-columns: 1fr; }
+            .video-text, .about-text-container { order: -1; margin-bottom: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">Medilab+</a>
+            <nav class="nav-links">
+                <a href="#hero-slider" class="active">Ana Sayfa</a>
+                <a href="#features">Hizmetler</a>
+                <a href="#about-project">Projemiz</a>
+                <a href="#doctors">Doktorlar</a>
+                <a href="#demo">Demo</a>
+                <a href="#footer">İletişim</a>
+            </nav>
+            <a href="#" class="cta-button">Randevu Al</a>
+            <button class="mobile-nav-toggle" aria-label="Menüyü aç/kapat"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Swiper Hero Slider -->
+        <section id="hero-slider" class="hero-slider section is-visible" style="padding:0; padding-top: 5rem;">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide" style="background-image: url('https://placehold.co/1920x1080/0F172A/1E293B?text=Teknoloji')">
+                        <div class="slide-overlay">
+                            <div class="hero-content">
+                                <h1 class="hero-title">Sağlığın Geleceği, Bugün Sizinle</h1>
+                                <p class="hero-subtitle">Yenilikçi teknolojiler ve uzman hekim kadromuzla, kişiye özel ve üstün nitelikli sağlık hizmetleri sunuyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide" style="background-image: url('https://placehold.co/1920x1080/1E293B/0F172A?text=İnovasyon')">
+                         <div class="slide-overlay">
+                            <div class="hero-content">
+                                <h1 class="hero-title">Veriye Dayalı Teşhis ve Tedavi</h1>
+                                <p class="hero-subtitle">Yapay zeka destekli sistemlerimizle daha hızlı ve doğru teşhis imkanı sağlıyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide" style="background-image: url('https://placehold.co/1920x1080/0F172A/334155?text=Güven')">
+                         <div class="slide-overlay">
+                            <div class="hero-content">
+                                <h1 class="hero-title">Size Özel Sağlık Yolculuğu</h1>
+                                <p class="hero-subtitle">Tedavi süreçlerinizi kişiselleştirerek en etkili sonuçları hedefliyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigasyon Okları -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- Sayfalama Noktaları -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section id="features" class="cards-section section is-visible">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="icon"><i class="fas fa-user-doctor"></i></div>
+                        <h3>Uzman Kadro</h3>
+                        <p>Alanında lider, deneyimli ve sürekli kendini geliştiren hekimlerle çalışıyoruz.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="fas fa-microchip"></i></div>
+                        <h3>İleri Teknoloji</h3>
+                        <p>En güncel teşhis ve tedavi cihazlarıyla doğru ve hızlı sonuçlar elde ediyoruz.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3>Hasta Odaklı Bakım</h3>
+                        <p>Her hastamızın özel olduğunu biliyor, tedavi süreçlerini kişiye özel planlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-project" class="about-project-section section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Projemizin Arkasındaki Vizyon</h2>
+                    <p>Sağlık hizmetlerini herkes için daha erişilebilir, anlaşılır ve etkili hale getirmeyi hedefliyoruz.</p>
+                </div>
+                <div class="about-project-content">
+                    <div class="about-text-container">
+                        <h3>Teknoloji ile İnsan Odaklı Yaklaşımın Birleşimi</h3>
+                        <p>Medilab+, sadece bir yazılım değil, aynı zamanda bir sağlık devrimidir. Amacımız, en son yapay zeka teknolojilerini kullanarak hastalar ve doktorlar arasındaki iletişimi güçlendirmek, teşhis süreçlerini hızlandırmak ve tedavi planlarını kişiselleştirmektir.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Kişiselleştirilmiş Sağlık Raporları</li>
+                            <li><i class="fas fa-check-circle"></i> Yapay Zeka Destekli Teşhis Önerileri</li>
+                            <li><i class="fas fa-check-circle"></i> Güvenli ve Erişilebilir Veri Yönetimi</li>
+                        </ul>
+                        <a href="#" class="cta-button">Vizyonumuzu Keşfedin</a>
+                    </div>
+                    <div class="about-image-container">
+                        <img src="https://placehold.co/600x450/1E293B/F1F5F9?text=Vizyonumuz" alt="Proje Vizyonu">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="doctors" class="doctors section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Alanında Lider Doktorlarımız</h2>
+                    <p>Deneyimli ve hasta odaklı uzman hekimlerimizle tanışın.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="doctor-card">
+                        <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=WW" alt="Doktor 1">
+                        <div class="doctor-info">
+                            <h4>Walter White</h4>
+                            <span>Başhekim</span>
+                            <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi.</p>
+                        </div>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=SJ" alt="Doktor 2">
+                        <div class="doctor-info">
+                            <h4>Sarah Jhonson</h4>
+                            <span>Anestezist</span>
+                            <p>Aut maiores voluptates amet et quis praesentium qui senda para.</p>
+                        </div>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=WA" alt="Doktor 3">
+                        <div class="doctor-info">
+                            <h4>William Anderson</h4>
+                            <span>Kardiyolog</span>
+                            <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="video-section section">
+            <div class="container">
+                <div class="video-content">
+                    <div class="video-text">
+                        <h3>Projemizi Hareket Halinde Görün</h3>
+                        <p>Medilab+ platformunun nasıl çalıştığını, sunduğu yenilikleri ve kullanıcı dostu arayüzünü kısa bir video ile keşfedin. Sağlık yönetiminin ne kadar kolay ve etkili olabileceğini kendiniz görün.</p>
+                        <a href="#" class="cta-button">Daha Fazla Bilgi</a>
+                    </div>
+                    <div class="video-player">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer section">
+        <div class="container" style="padding-bottom: 50px;">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Medilab+</h4>
+                    <p>Sağlığın geleceğini şekillendiren, yenilikçi ve güvenilir sağlık ortağınız.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Hızlı Erişim</h4>
+                    <a href="#">Ana Sayfa</a>
+                    <a href="#">Hizmetlerimiz</a>
+                    <a href="#">Gizlilik Politikası</a>
+                </div>
+                <div class="footer-col">
+                    <h4>İletişim</h4>
+                    <p>Teknopark, Gaziantep, Türkiye</p>
+                    <p>info@medilabplus.com</p>
+                    <p>+90 555 123 4567</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Medilab+. Tüm Hakları Saklıdır. Profesyonel AI Assistant tarafından tasarlandı.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Swiper Slider Başlatma
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+
+            // Sayfa kaydırıldığında bölümleri ortaya çıkarma efekti
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
