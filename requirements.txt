@@ -10,3 +10,4 @@ jinja2
 email-validator
 itsdangerous
 google-generativeai
+gunicorn
