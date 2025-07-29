@@ -1,4 +1,86 @@
+# Docmed
+
+## Demo
+https://github.com/user-attachments/assets/e83e16cb-9f17-4ecb-8a9f-acaac245d16b
+
+
+## [TR] 
+
+# 🧠 Docmed
+
+**Docmed**, FastAPI ve yapay zekâ destekli bir hasta-doktor iletişim ve eğitim platformudur. Gerçek kimlik doğrulaması, yapay zekâ destekli tanı sistemi ve doktorlar için eğitim simülasyonları içerir.
+
+---
+
+## 🚪 Giriş & Kayıt
+
+- 🔒 **Gerçek TC Kimlik doğrulaması** algoritması kullanılır. Sahte girişler engellenir.
+- 🍪 Cookie desteği sayesinde sonraki girişlerde kullanıcıya kolaylık sağlanır.
+- 📥 Kayıt olurken kullanıcıların TC Kimlik Numarası doğrulanır.
+
+---
+
+## 🤒 Hasta Arayüzü
+
+- 🗣️ Kullanıcılar semptomlarını serbest biçimde yazabilir.
+- 📩 Semptomlar doğrudan doktorun sistemine iletilir.
+- ⏳ Hasta, doktorun çağırmasını bekler.
+
+---
+
+## 🩺 Doktor Paneli
+
+- 📃 Tüm hastaların listesine erişim.
+- 🧠 Her hasta için:
+  - Yapay zekâdan alınan **hastalık başlığı**
+  - **Açıklama ve yorumlar**
+  - Olası hastalıklar ve **% ihtimaller**
+  - **Önerilen ilaçlar**
+  - Genel tedavi **tavsiyeleri**
+- 📄 Tek tuşla **rapor oluşturma** özelliği
+
+---
+
+## 🗃️ Kayıt Sistemi
+
+- Tüm veriler kayıt altına alınır:
+  - Kullanıcı bilgisi
+  - Semptom açıklaması
+  - Tanı başlığı
+  - Yapay zekâ çıktıları
+  - Tedavi planı ve önerilen ilaçlar
+
+---
+
+## 🎓 Eğitim Platformu
+
+- 👨‍⚕️ Doktorlara özel eğitim paneli
+- 🧪 Alan ve zorluk seviyesine göre **vaka seçimi**
+- 📊 Her vaka için:
+  - Verilen ilaçlar
+  - AI tavsiyeleri
+  - Doktorların uyguladığı tedavi yolları
+  - Olası tanılar ve istatistiksel dağılım
+
+---
+
+## 🚀 Teknolojiler
+
+- **FastAPI** & **SQLAlchemy**
+- **Google Generative AI** (Gemini API)
+- **Cookie tabanlı oturum yönetimi**
+- **Yapay zekâ destekli sağlık tahmini**
+
+---
+
+> Sağlıkta dijital dönüşüm: **Docmed** ile hem teşhis hem eğitim bir arada.
+
+![WhatsApp Image 2025-07-29 at 23 16 40_e1d412c2](https://github.com/user-attachments/assets/3f5a5de9-a72c-447c-8a45-7cfdf38556e5)
+
+![WhatsApp Image 2025-07-29 at 23 13 35_5e4b57c5](https://github.com/user-attachments/assets/21e111a6-e7fb-414e-922f-0a6e2e47b809)
+
 ## Team Members
+
 
 |       | Collaborators             | Roles           | Socials                                                                                         | GitHub                                                                                           |
 |-------|----------------------------|------------------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
