@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+psycopg2-binary
+python-dotenv
+passlib[bcrypt]
+python-multipart
+jinja2
+email-validator
+itsdangerous
+google-generativeai
