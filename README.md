@@ -31,90 +31,95 @@ https://www.youtube.com/watch?v=hOTAXraJESU
 
 ## 🚀 Product Features
 
+# 🧠 Smart Medical Assistant Platform
+
+A role-based web platform that leverages **AI and NLP** to assist patients, doctors, and medical students in triage, diagnosis, and clinical education.
+
+---
+
+## 🚀 Key Features
+
 ### 🔐 1. Login & Registration System
 
-**Overview:** This is the main entry point for all users. Patients, doctors, and students/educators can sign up and log in based on their role.
+A secure and user-friendly entry point tailored to each user type.
 
-**Features:**
-- Secure authentication with ID
-- Role-based access: Patient, Doctor, or Student/Educator
-- Password recovery and privacy agreement acceptance
-- Input validation for data accuracy
-- Smart redirection to relevant dashboard after login
-- ID number validation algorithm
+- Role-based access: Patient, Doctor, or Student/Educator  
+- Secure authentication using national ID
+- Password recovery and privacy agreement enforcement
+- Input validation for all form fields
+- Smart redirection to user-specific dashboards
+- ID number validation using custom algorithm
 
 ---
 
 ### 🧑‍⚕️ 2. Patient Module – Symptom Entry & AI Triage
 
-**Overview:** Patients provide personal information and describe their symptoms freely. The system processes this data using AI and NLP.
+Patients can freely describe their symptoms; our system translates and processes the input through AI and NLP.
 
-**Features:**
-- Free-text symptom entry with smart suggestions
-- NLP-based translation from layman terms to medical language
-- AI-generated triage report: Green / Yellow / Red urgency
-- Summary and tabular report views available instantly
-- All data securely saved in the system database
+- Free-text symptom entry with intelligent suggestions
+- NLP-driven conversion to medical terminology
+- AI-generated triage levels: Green / Yellow / Red
+- Instant summary and tabular report views
+- Secure storage of patient data in the backend
 
 ---
 
-### 🩺 3. Doctor Module – Case Overview & Evaluation
+### 🩺 3. Doctor Module – Case Management & Evaluation
 
-**Overview:** Doctors can access a dashboard listing all relevant cases and perform evaluations supported by AI insights.
+Doctors access triaged cases and manage them using AI-powered tools.
 
-**Features:**
-- Case summaries with anonymized IDs, timestamps, and triage levels
-- Full AI report + patient’s own narrative
-- Diagnosis input field and doctor’s notes section
-- Status management: Reviewed, Closed, On Hold, etc.
-- Filtering and sorting by urgency, date, and more
+- Case list with anonymized ID, timestamps, and urgency levels
+- Detailed view: AI-generated report + patient description
+- Fields for diagnosis and doctor’s notes
+- Case status management: Reviewed, Closed, On Hold, etc.
+- Sorting and filtering by urgency, date, and more
 
 ---
 
 ### 🎓 4. Education Module – Clinical Thinking & Feedback
 
-**Overview:** Rare, educational cases are automatically selected by the system and assigned to students for analysis and feedback.
+Designed for students and educators to practice and assess clinical decision-making.
 
-**Features:**
-- Rare case library tailored for educational use
-- Student input for diagnosis and differential reasoning
+- Rare case library curated for training purposes
+- Diagnostic input and reasoning submission for students
 - Real-time AI evaluation and scoring
-- Educator dashboard to track student progress
-- Supplementary learning notes and clinical hints
+- Educator dashboard for progress tracking
+- Extra learning materials and diagnostic hints
 
 ---
 
 ### 📚 5. Support & Utilities
 
-**Features:**
-- 🔔 Notification Panel: Real-time updates and alerts
-- ❓ FAQ & Help Center: User guide and support form
-- 👤 Profile & Settings: Password change, profile management
+- 🔔 **Notification Panel**: Stay updated with real-time alerts  
+- ❓ **FAQ & Help Center**: Access user guides and contact support  
+- 👤 **Profile Settings**: Manage profile and change password  
 
 ---
 
-## 🧩 Core System Highlights
+## 🧩 System Highlights
 
-- 🔐 **Data Privacy & Compliance:** Encrypted data, GDPR-compliant storage
-- 🤖 **AI + NLP Integration:** Drives all major modules
-- 📱 **Responsive UI:** Optimized for all screen sizes
-- 📊 **Simplified Reporting:** Clean and understandable insights for all users
+- 🔐 **Data Privacy & Compliance**: End-to-end encryption & GDPR-compliant storage  
+- 🤖 **AI + NLP Integration**: Powers all major modules  
+- 📱 **Responsive Design**: Seamless experience across devices  
+- 📊 **User-Friendly Reports**: Clear insights for every user type  
 
 ---
 
 ## 🎯 Target Users
 
-### 👨‍⚕️ Patients
-Easily describe symptoms, receive instant AI triage, and seamlessly connect with doctors.
+### 👨‍⚕️ Patients  
+Describe symptoms in plain language, receive instant triage results, and connect with healthcare providers.
 
-### 🧑‍⚕️ Doctors
-Access AI-prioritized reports, evaluate cases quickly, and optimize clinical decisions.
+### 🧑‍⚕️ Doctors  
+Review AI-prioritized cases, make informed decisions, and document diagnoses efficiently.
 
-### 🧑‍🎓 Medical Students
-Analyze real and rare cases, sharpen diagnostic reasoning, and get AI feedback.
+### 🧑‍🎓 Medical Students  
+Practice with real-world scenarios, receive AI feedback, and improve clinical reasoning skills.
 
-### 👩‍🏫 Educators
-Track student evaluations, provide feedback, and enhance clinical education through data-driven monitoring.
+### 👩‍🏫 Educators  
+Monitor student progress, assess case handling, and enhance learning outcomes with AI-assisted analytics.
+
+---
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3f5a5de9-a72c-447c-8a45-7cfdf38556e5" width="45%" />
