@@ -391,6 +391,12 @@ Technical documentation and handover materials were completed to ensure long-ter
 
 •	Completion of technical documentation
 
+![PHOTO-2025-07-31-00-53-37](https://github.com/user-attachments/assets/0daff16f-70e0-40f6-b302-b0b4e3330fb3)
+![PHOTO-2025-07-31-00-50-12](https://github.com/user-attachments/assets/d23315eb-c06e-4b26-b65e-6da5c349e719)
+![PHOTO-2025-07-31-00-52-06](https://github.com/user-attachments/assets/5c283076-85c9-4105-966c-16ac373f147c)
+![PHOTO-2025-07-31-00-52-17](https://github.com/user-attachments/assets/cf00b64d-91f9-4ebc-9ea9-97fd67bf24b1)
+
+
 ## Sprint Review
 
 •	AI model performance improved through extensive testing and prompt refinement.
