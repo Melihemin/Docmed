@@ -439,6 +439,13 @@ Technical documentation and handover materials were completed to ensure long-ter
 •	Finalized web project pages with descriptions
 
 •	Digital system architecture diagram
+
+<img width="1512" height="858" alt="Ekran Resmi 2025-07-31 19 33 17" src="https://github.com/user-attachments/assets/3e43b667-a379-4eaa-afcb-301e3239ddcf" />
+<img width="1512" height="858" alt="Ekran Resmi 2025-07-31 19 33 25" src="https://github.com/user-attachments/assets/deea0b36-e439-4f37-aa74-4187785854b7" />
+<img width="1512" height="858" alt="Ekran Resmi 2025-07-31 19 33 31" src="https://github.com/user-attachments/assets/d4aee585-71f9-4adb-96d3-eb76ad660578" />
+<img width="1512" height="858" alt="Ekran Resmi 2025-07-31 19 33 38" src="https://github.com/user-attachments/assets/eff5ec5d-bcb0-4ea0-b710-bb909f5c0f62" />
+<img width="1512" height="858" alt="Ekran Resmi 2025-07-31 19 33 44" src="https://github.com/user-attachments/assets/5ca52e02-9aab-40d2-b275-e55caed1300c" />
+<img width="1512" height="858" alt="Ekran Resmi 2025-07-31 19 33 52" src="https://github.com/user-attachments/assets/1a3c6e03-5e2c-48a9-aafd-16bb8b904885" />
  
 ## Daily Scrum
 
