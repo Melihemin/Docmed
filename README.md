@@ -358,3 +358,112 @@ Google Docs	Meeting notes
 
 •	Continue frontend feature development and UI refinements
 
+# SPRINT 3
+
+## Sprint Notes
+The AI model was fully integrated and rigorously tested with real-life patient symptom scenarios.
+Prompt testing and refinement improved the AI’s ability to provide accurate, medically coherent responses.
+Backend performance optimizations and error handling were implemented for a smoother experience.
+The web project UI was finalized with detailed project information pages (purpose, workflow, user roles).
+A modern system architecture diagram was created and digitized for clarity and documentation.
+Doctor interface gained triage-based filtering (green, yellow, red prioritization).
+Student module prototype was added, showcasing rare cases for medical education.
+Database integration is now complete, with real patient data being stored and retrieved.
+Technical documentation and handover materials were completed to ensure long-term maintainability.
+
+## Sprint Board – Completed Tasks
+
+•	AI model integration and testing
+
+•	Prompt improvements and accuracy tuning
+
+•	Backend performance and bug fixes
+
+•	Web UI completion and responsive design
+
+•	Digital system architecture diagram
+
+•	Student (Education) module prototype
+
+•	Doctor triage-based filtering
+
+•	Database activation and testing
+
+•	Completion of technical documentation
+
+## Sprint Review
+
+•	AI model performance improved through extensive testing and prompt refinement.
+
+•	Web platform now includes finalized user interfaces and project details for all roles (Patient, Doctor, Student).
+
+•	Digital system architecture flowchart serves as a central reference for all future documentation.
+
+•	Educational features for medical students (rare case library) were successfully introduced.
+
+•	The system is stable and ready for demonstration or deployment.
+
+## Sprint Score – Points System
+
+•	Each sprint was estimated at 100 points based on task scope and complexity.
+
+•	Sprint 1 (100 pts), Sprint 2 (100 pts), and Sprint 3 (100 pts) have all been fully completed, bringing the total to 300 points.
+
+•	This points system was used to measure workload and ensure balanced progress across all phases.
+
+•	Sprint 3 focused on finalizing AI integration, UI polish, and documentation, accounting for its 100-point allocation.
+
+## App & System Visuals
+
+•	AI test outputs
+
+•	Doctor interface with triage filtering
+
+•	Rare case section (Student module)
+
+•	Finalized web project pages with descriptions
+
+•	Digital system architecture diagram
+ 
+## Daily Scrum
+
+Daily updates were shared via WhatsApp, while weekly Google Meet sessions were conducted for reviews and planning.
+AI testing and system improvements were frequently discussed during these meetings.
+
+Chat History Links: https://github.com/Melihemin/Docmed/tree/main/Daily%20Scrum
+
+
+## Sprint Retrospective – Final Reflections
+
+•	Sprint 3 marked the successful conclusion of the DiagnoAI development journey. During this final phase, the team effectively brought together all core components into a stable, testable, and user-friendly system. The AI model’s performance was significantly improved through well-structured prompt testing and iterative refinement, which enhanced the accuracy and reliability of symptom-to-report translation.
+
+•	On the frontend, thoughtful UI design updates, clear project explanations, and responsive layouts ensured a smoother experience for patients, doctors, and students alike. The introduction of the rare case library in the student module extended the project's value into medical education. On the backend, performance improvements and complete database integration laid the foundation for scalability and long-term maintainability.
+
+•	The digitized system architecture diagram now offers a comprehensive visual reference of the entire platform, supporting documentation, onboarding, and presentations.
+Team communication remained strong through WhatsApp updates and weekly Google Meet meetings. Despite remote collaboration, alignment on goals and deliverables was maintained throughout the sprint.
+
+•	In summary, Sprint 3 delivered on all intended objectives, reaching the full 100-point target. Across all three sprints, 300 out of 300 points were completed, marking the project as functionally complete and deployment-ready.
+
+## Areas for Future Work
+
+•	Expand content for the Student module
+
+•	Add advanced error tracking and analytics
+
+•	Plan for multilingual support and more real-world testing
+
+## Tools Used
+
+During the project, various tools were used to streamline communication, development, and documentation. 
+
+•	Trello was utilized for task management and sprint tracking, allowing the team to plan and monitor progress effectively. 
+
+•	Daily communication and quick updates were maintained through WhatsApp, while Google Meet facilitated weekly online team meetings.
+
+•	For backend and AI service development, FastAPI was used, and GitHub served as the platform for version control and collaboration. 
+
+•	Project notes and team decisions were organized using Google Docs.
+
+•	Designs and system flow diagrams were created using Figma and Draw.io, which helped visualize UI elements and architecture. 
+
+•	For data storage and queries, SQLite was employed depending on the testing and deployment needs
