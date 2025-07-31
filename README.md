@@ -7,7 +7,11 @@ Docmed is a web-based healthcare support platform that leverages artificial inte
 ## DemoVideo
 
 
-https://github.com/user-attachments/assets/0d3e0e80-88a1-4bd6-a52f-6b1b9f7609a8
+
+
+https://github.com/user-attachments/assets/2285814d-8025-4610-964e-90df1b622a83
+
+
 
 https://www.youtube.com/watch?v=gDzbwd2oFyo
 
