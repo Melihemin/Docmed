@@ -446,6 +446,12 @@ Technical documentation and handover materials were completed to ensure long-ter
 <img width="1512" height="858" alt="Ekran Resmi 2025-07-31 19 33 38" src="https://github.com/user-attachments/assets/eff5ec5d-bcb0-4ea0-b710-bb909f5c0f62" />
 <img width="1512" height="858" alt="Ekran Resmi 2025-07-31 19 33 44" src="https://github.com/user-attachments/assets/5ca52e02-9aab-40d2-b275-e55caed1300c" />
 <img width="1512" height="858" alt="Ekran Resmi 2025-07-31 19 33 52" src="https://github.com/user-attachments/assets/1a3c6e03-5e2c-48a9-aafd-16bb8b904885" />
+<img width="1503" height="790" alt="Ekran Resmi 2025-07-31 20 50 59" src="https://github.com/user-attachments/assets/87ea340b-7fda-4033-bc48-3bf6e333beb1" />
+<img width="1503" height="790" alt="Ekran Resmi 2025-07-31 20 51 09" src="https://github.com/user-attachments/assets/9f6236cf-bacc-444a-825a-19a39d381fb5" />
+<img width="1503" height="790" alt="Ekran Resmi 2025-07-31 20 51 20" src="https://github.com/user-attachments/assets/e31ece2c-9e38-44ce-ac26-5edd3b32f9e3" />
+<img width="1503" height="790" alt="Ekran Resmi 2025-07-31 20 51 34" src="https://github.com/user-attachments/assets/7ffd640d-e2bf-4069-ab40-fe8600398a5d" />
+<img width="1503" height="790" alt="Ekran Resmi 2025-07-31 20 51 41" src="https://github.com/user-attachments/assets/99c0e275-7080-42f9-8082-8634d8b2c631" />
+<img width="1503" height="790" alt="Ekran Resmi 2025-07-31 20 52 15" src="https://github.com/user-attachments/assets/a6c13b45-1e92-40d6-9b5e-dad726850729" />
  
 ## Daily Scrum
 
