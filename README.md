@@ -179,7 +179,9 @@ Validation Loss (Green): The model's error on new, unseen data. Its decrease sho
 | <img src="https://github.com/Melihemin/OptiMend-AI/blob/main/team_information/hatice_sanli.jpg" width="100" height="100"> | Hatice Şanlı  | Developer & Scrum Master | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/linkedin.png" width="100" height="100">](https://github.com/Melihemin/OptiMend-AI/blob/main/team_information/hatice_sanli.jpg) | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/github.png" width="100" height="100">](https://www.linkedin.com/in/hatice-%C5%9Fanl%C4%B1-539066266/) |
 | <img src="https://github.com/Melihemin/OptiMend-AI/blob/main/team_information/nergiz_alici.jpg" width="100" height="100"> | Nergiz Alıcı  | Developer & Scrum Master| [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/linkedin.png" width="100" height="100">](https://www.linkedin.com/in/nergiz-al%C4%B1ci/) | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/github.png" width="100" height="100">](https://github.com/nergizal) |
 
+--------------------------------------
 
+# SPRINT SECTION
   
 # SPRINT 1 
 
