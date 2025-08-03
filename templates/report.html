@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ report_title }}</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .report-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-top: 8px solid #007bff;
+        }
+        .report-header {
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .report-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #007bff;
+        }
+        .report-header p {
+            margin: 4px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .report-section {
+            margin-bottom: 25px;
+        }
+        .report-section h2 {
+            font-size: 18px;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        .patient-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        .patient-info li {
+            padding: 5px 0;
+            font-size: 16px;
+        }
+        .patient-info strong {
+            display: inline-block;
+            width: 180px;
+            color: #555;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #d9534f;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffeeba;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .signature {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .signature p {
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="report-container">
+
+    <div class="report-header">
+        <h1>{{ hospital_name }}</h1>
+    </div>
+
+    <hr>
+
+    {# HASTA BİLGİLERİ BÖLÜMÜ #}
+    <div class="report-section patient-info">
+        <h2>HASTA BİLGİLERİ</h2>
+        <ul>
+            <li><strong>Hasta Adı Soyadı:</strong> {{ patient.name }}</li>
+            <li><strong>T.C. Kimlik No:</strong> {{ patient.tckn }}</li>
+            <li><strong>Rapor Tarihi:</strong> {{ report.date }}</li>
+            <li><strong>Referans No:</strong> {{ report.ref_no }}</li>
+        </ul>
+    </div>
+
+    {# MEVCUT DURUM VE ŞİKAYETLER BÖLÜMÜ #}
+    <div class="report-section">
+        <h2>1. Mevcut Durum ve Şikayetler</h2>
+        {# | safe filtresi, değişkendeki HTML etiketlerinin (span gibi) render edilmesini sağlar #}
+        <p>{{ report.symptoms_description | safe }}</p>
+    </div>
+
+    {# YAPAY ZEKA ANALİZİ BÖLÜMÜ #}
+    <div class="report-section">
+        <h2>2. Yapay Zeka Destekli Ön Tanı Analizi</h2>
+        <p>Hastanın semptomları, yapay zeka destekli teşhis modülümüz tarafından analiz edilmiş ve aşağıdaki potansiyel tanılar olasılıklarıyla birlikte sıralanmıştır:</p>
+        <ul>
+            {% for diagnosis in ai_analysis.potential_diagnoses %}
+                <li><strong>{{ diagnosis.name }}:</strong> {{ diagnosis.probability }}%</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {# KLİNİK TANI BÖLÜMÜ #}
+    <div class="report-section">
+        <h2>3. Klinik Tanı</h2>
+        <p>Semptomlar ve yapay zeka analizinin işaret ettiği yüksek olasılık göz önüne alındığında, hastanın tanısı <strong>{{ report.clinical_diagnosis }}</strong> olarak belirlenmiştir.</p>
+    </div>
+
+    {# TEDAVİ PLANI BÖLÜMÜ #}
+    <div class="report-section">
+        <h2>4. Tedavi Planı ve Öneriler</h2>
+        <p>Hastanın bağışıklık sistemini doğal yollarla desteklemek ve iyileşme sürecini hızlandırmak amacıyla aşağıdaki adımlar tavsiye edilmektedir:</p>
+        <ul>
+            {% for item in treatment.plan %}
+                <li><strong>{{ item.title }}:</strong> {{ item.description }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {# DOĞAL TAKVİYELER BÖLÜMÜ #}
+    <div class="report-section">
+        <h2>5. Önerilen Doğal Takviyeler ve Bitkisel Destekler</h2>
+        <div class="note">
+            <strong>Not:</strong> Bu takviyeleri kullanmadan önce doktorunuza veya eczacınıza danışmanız önemlidir.
+        </div>
+        <p>Tedaviye destek olması amacıyla aşağıdaki doğal takviyeler değerlendirilebilir.</p>
+        <ul>
+            {% for supplement in treatment.supplements %}
+                <li><strong>{{ supplement.name }}:</strong> {{ supplement.description }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {# KAÇINILMASI GEREKENLER BÖLÜMÜ #}
+    <div class="report-section">
+        <h2>6. Tedavi Süresince KAÇINILMASI GEREKENLER</h2>
+        <p>İyileşme sürecini olumsuz etkileyebileceği için aşağıdakilerden uzak durulmalıdır:</p>
+        <ul>
+            {% for item in treatment.avoidances %}
+                <li><strong>{{ item.title }}:</strong> {{ item.description }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {# GENEL DEĞERLENDİRME BÖLÜMÜ #}
+    <div class="report-section">
+        <h2>7. Genel Değerlendirme</h2>
+        <p>{{ report.general_evaluation }}</p>
+    </div>
+
+    {# İMZA BÖLÜMÜ #}
+    <div class="signature">
+        <p>Saygılarımla,</p>
+        <p><strong>Dr. {{ doctor.name }}</strong></p>
+        <p>{{ doctor.specialty }}</p>
+    </div>
+
+</div>
+
+</body>
+</html>
