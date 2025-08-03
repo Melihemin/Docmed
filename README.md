@@ -1,24 +1,128 @@
 # Team Name: AI’m Fine 
 
+
+Our Trello Link: https://trello.com/invite/b/685aa4443a00e4e2ff9b8756/ATTIf4340459b7dd4851d03b223950619c8b97BEF699/yzta-bootcamp
+
 ## Demo Video
 
-
-https://github.com/user-attachments/assets/2285814d-8025-4610-964e-90df1b622a83
-
+https://github.com/user-attachments/assets/8de424cd-50ff-46a5-8e86-580e83a113d5
 
 
-https://www.youtube.com/watch?v=hOTAXraJESU
+https://youtu.be/mF2d6E-SeuQ
 
+# Docmed – AI-Powered Medical Decision Assistant
+
+Docmed is a smart health assistant system. It helps patients explain their symptoms, supports doctors in making decisions, and gives medical students a place to learn from real cases. The system has four main modules:
+
+- Patient Module – Writing Symptoms
+- Doctor Module – Managing Cases
+- Education Module – Medical Learning
+- Report Module – Full Medical Reports
+
+---
+
+## Patient Module – Writing Symptoms
+
+Patients can write their symptoms in their own words. They don’t need to use medical language. The system:
+
+- Understands and changes these words into medical terms.
+- Analyzes the situation and gives an urgency level:
+  - Green: Low risk
+  - Yellow: Medium risk
+  - Red: High risk
+- Creates a short summary of the case.
+- Sends this summary to the doctor automatically.
+
+---
+
+## Doctor Module – Managing Cases
+
+Doctors see a full list of patients, including:
+
+- National ID number
+- Time of visit
+- Medical department
+- Urgency level (Green, Yellow, Red)
+
+For each patient, doctors can:
+
+- View AI-generated suggestions:
+  - 3 possible diseases (with percentage chances)
+  - Recommended medicines
+  - Recovery suggestions
+- Read patient symptoms and AI analysis together
+- Write their own notes
+- Use the report section to create a full medical report (explained below)
+
+---
+
+## Education Module – Medical Learning
+
+This module is for medical students and doctors in training. Users can:
+
+- Choose cases by urgency (Green, Yellow, Red)
+- See:
+  - Patient symptoms
+  - Suggested diseases and chances
+  - Recommended treatments
+  - Recovery advice
+- Check the doctor's final decision, notes, and full report
+- Learn from real examples and improve decision skills
+
+---
+
+## Report Module – Full Medical Reports
+
+The system creates a detailed medical report for each case. Reports include:
+
+### AI-Powered Pre-Diagnosis
+- Based on symptoms, the system shows if it may be:
+  - Common cold
+  - Flu
+  - Sinus infection
+- Each suggestion has a percentage chance
+
+### Clinical Diagnosis
+- The doctor gives the final diagnosis
+
+### Treatment Plan and Suggestions
+- Suggested medicines
+- Daily care advice (rest, hydration, etc.)
+
+### Natural Support
+- Herbal and vitamin recommendations
+- Foods and drinks that support recovery
+
+### Things to Avoid
+- Physical overwork
+- Alcohol, smoking
+- Processed and sugary foods
+
+### Recovery Timeline and Guidance
+- Estimated healing time
+- What to do to recover faster
+- What to do if symptoms get worse after 3–4 days
+
+### Patient Info and References
+- Patient’s ID
+- Report ID and date
+
+---
+
+## Why Use Docmed?
+
+- Easy to write symptoms in natural language
+- Fast AI support for doctors
+- Real cases for medical education
+- Complete and organized reports
+- Modular system, easy to grow and improve
+
+> Docmed helps patients explain, doctors decide, and students learn — all in one smart system.
 ![WhatsApp Image 2025-08-03 at 15 44 59](https://github.com/user-attachments/assets/fb07ddc0-75f4-4a24-8d3f-5e8ed7d2fe31)
 
 
-## Product Description
-
-Docmed is a web-based healthcare support platform that leverages artificial intelligence to facilitate the flow of medical information between patients, doctors, and educators or students. The system utilizes natural language processing techniques to translate patients’ self-expressed symptoms into medical terminology, and determines each case’s urgency level through an AI-powered triage mechanism. In this way, doctors receive concise and meaningful reports that accelerate diagnostic and intervention processes. The platform also automatically identifies and labels rare medical cases for educational purposes; this dual-purpose approach both eases the workload of doctors and enables medical students and educators to perform interactive AI-assisted analyses on rare cases and receive instant feedback. All data is securely stored in the system database. DiagnoAI aims to modernize doctor–patient communication and enhance healthcare education with smart Technologies
-
-
 ## Fine-Tuning the AI Model for Medical Reporting
-The core of Docmed's intelligence lies in a fine-tuned Gemini model. A general-purpose AI model is powerful, but to understand the nuances of patient symptoms and convert them into structured medical reports, it needs specialized training. This process is called "fine-tuning."
+The core of Docmed's intelligence lies in a fine-tuned Gemini model. A general-purpose AI model is powerful, but to understand the nuances of patient symptoms and convert them into structured medical reports, it needs specialized training.
 
   - 1. The Goal: Teaching the AI to be a Medical Scribe
 Our goal is to teach the model a single, critical task: take a patient's informal, everyday language description of their symptoms (input_text) and transform it into a standardized, professional, and data-rich HTML report (output_text) that a doctor can immediately use.
@@ -56,9 +160,9 @@ python advanced_finetune.py \
   - 4. Monitoring Model Performance
 During training, we track the model's "loss" value across each "epoch" (a full pass through the training data). A lower loss value means a more accurate model. The graph below illustrates an ideal training session, showing that the model gets progressively better at its task without simply memorizing the data.
 
-Training Loss (Mavi): The model's error on the data it's learning from. Its consistent decrease is a good sign.
+Training Loss (Blue): The model's error on the data it's learning from. Its consistent decrease is a good sign.
 
-Validation Loss (Yeşil): The model's error on new, unseen data. Its decrease shows the model is genuinely learning and can generalize.
+Validation Loss (Green): The model's error on new, unseen data. Its decrease shows the model is genuinely learning and can generalize.
 
 <img width="1600" height="1025" alt="unnamed" src="https://github.com/user-attachments/assets/9b9aa0ea-1eea-4d97-87cd-9e267e86e333" />
 <img width="512" height="512" alt="unnamed" src="https://github.com/user-attachments/assets/ac464d27-5bae-4ea9-9424-79ac0fa153cc" />
@@ -76,101 +180,7 @@ Validation Loss (Yeşil): The model's error on new, unseen data. Its decrease sh
 | <img src="https://github.com/Melihemin/OptiMend-AI/blob/main/team_information/nergiz_alici.jpg" width="100" height="100"> | Nergiz Alıcı  | Developer & Scrum Master| [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/linkedin.png" width="100" height="100">](https://www.linkedin.com/in/nergiz-al%C4%B1ci/) | [<img src="https://raw.githubusercontent.com/Melihemin/GeVmini/main/assets/profile_image/github.png" width="100" height="100">](https://github.com/nergizal) |
 
 
-
-
-## 🚀 Product Features
-
-# 🧠 Smart Medical Assistant Platform
-
-A role-based web platform that leverages **AI and NLP** to assist patients, doctors, and medical students in triage, diagnosis, and clinical education.
-
----
-
-## 🚀 Key Features
-
-### 🔐 1. Login & Registration System
-
-A secure and user-friendly entry point tailored to each user type.
-
-- Role-based access: Patient, Doctor, or Student/Educator  
-- Secure authentication using national ID
-- Password recovery and privacy agreement enforcement
-- Input validation for all form fields
-- Smart redirection to user-specific dashboards
-- ID number validation using custom algorithm
-
----
-
-### 🧑‍⚕️ 2. Patient Module – Symptom Entry & AI Triage
-
-Patients can freely describe their symptoms; our system translates and processes the input through AI and NLP.
-
-- Free-text symptom entry with intelligent suggestions
-- NLP-driven conversion to medical terminology
-- AI-generated triage levels: Green / Yellow / Red
-- Instant summary and tabular report views
-- Secure storage of patient data in the backend
-
----
-
-### 🩺 3. Doctor Module – Case Management & Evaluation
-
-Doctors access triaged cases and manage them using AI-powered tools.
-
-- Case list with anonymized ID, timestamps, and urgency levels
-- Detailed view: AI-generated report + patient description
-- Fields for diagnosis and doctor’s notes
-- Case status management: Reviewed, Closed, On Hold, etc.
-- Sorting and filtering by urgency, date, and more
-
----
-
-### 🎓 4. Education Module – Clinical Thinking & Feedback
-
-Designed for students and educators to practice and assess clinical decision-making.
-
-- Rare case library curated for training purposes
-- Diagnostic input and reasoning submission for students
-- Real-time AI evaluation and scoring
-- Educator dashboard for progress tracking
-- Extra learning materials and diagnostic hints
-
----
-
-### 📚 5. Support & Utilities
-
-- 🔔 **Notification Panel**: Stay updated with real-time alerts  
-- ❓ **FAQ & Help Center**: Access user guides and contact support  
-- 👤 **Profile Settings**: Manage profile and change password  
-
----
-
-## 🧩 System Highlights
-
-- 🔐 **Data Privacy & Compliance**: End-to-end encryption & GDPR-compliant storage  
-- 🤖 **AI + NLP Integration**: Powers all major modules  
-- 📱 **Responsive Design**: Seamless experience across devices  
-- 📊 **User-Friendly Reports**: Clear insights for every user type  
-
----
-
-## 🎯 Target Users
-
-### 👨‍⚕️ Patients  
-Describe symptoms in plain language, receive instant triage results, and connect with healthcare providers.
-
-### 🧑‍⚕️ Doctors  
-Review AI-prioritized cases, make informed decisions, and document diagnoses efficiently.
-
-### 🧑‍🎓 Medical Students  
-Practice with real-world scenarios, receive AI feedback, and improve clinical reasoning skills.
-
-### 👩‍🏫 Educators  
-Monitor student progress, assess case handling, and enhance learning outcomes with AI-assisted analytics.
-
----
-
-
+  
 # SPRINT 1 
 
 ### Sprint Notes
