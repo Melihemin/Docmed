@@ -1,12 +1,6 @@
 # Team Name: AI’m Fine 
 
-## Product Description
-
-Docmed is a web-based healthcare support platform that leverages artificial intelligence to facilitate the flow of medical information between patients, doctors, and educators or students. The system utilizes natural language processing techniques to translate patients’ self-expressed symptoms into medical terminology, and determines each case’s urgency level through an AI-powered triage mechanism. In this way, doctors receive concise and meaningful reports that accelerate diagnostic and intervention processes. The platform also automatically identifies and labels rare medical cases for educational purposes; this dual-purpose approach both eases the workload of doctors and enables medical students and educators to perform interactive AI-assisted analyses on rare cases and receive instant feedback. All data is securely stored in the system database. DiagnoAI aims to modernize doctor–patient communication and enhance healthcare education with smart Technologies
-
-## DemoVideo
-
-
+## Demo Video
 
 
 https://github.com/user-attachments/assets/2285814d-8025-4610-964e-90df1b622a83
@@ -14,6 +8,60 @@ https://github.com/user-attachments/assets/2285814d-8025-4610-964e-90df1b622a83
 
 
 https://www.youtube.com/watch?v=hOTAXraJESU
+
+
+
+## Product Description
+
+Docmed is a web-based healthcare support platform that leverages artificial intelligence to facilitate the flow of medical information between patients, doctors, and educators or students. The system utilizes natural language processing techniques to translate patients’ self-expressed symptoms into medical terminology, and determines each case’s urgency level through an AI-powered triage mechanism. In this way, doctors receive concise and meaningful reports that accelerate diagnostic and intervention processes. The platform also automatically identifies and labels rare medical cases for educational purposes; this dual-purpose approach both eases the workload of doctors and enables medical students and educators to perform interactive AI-assisted analyses on rare cases and receive instant feedback. All data is securely stored in the system database. DiagnoAI aims to modernize doctor–patient communication and enhance healthcare education with smart Technologies
+
+
+## Fine-Tuning the AI Model for Medical Reporting
+The core of Docmed's intelligence lies in a fine-tuned Gemini model. A general-purpose AI model is powerful, but to understand the nuances of patient symptoms and convert them into structured medical reports, it needs specialized training. This process is called "fine-tuning."
+
+  - 1. The Goal: Teaching the AI to be a Medical Scribe
+Our goal is to teach the model a single, critical task: take a patient's informal, everyday language description of their symptoms (input_text) and transform it into a standardized, professional, and data-rich HTML report (output_text) that a doctor can immediately use.
+
+  - 2. Preparing the Training Data
+The model learns from examples. We created a dataset in the JSON Lines (.jsonl) format, where each line is a complete training example.
+
+input_text: A string containing patient information, complaints, and other details, written in a semi-structured format.
+
+output_text: The corresponding, perfectly formatted HTML report the model is expected to produce.
+
+Example data (gemini_model/train_data.jsonl):
+
+```json
+
+{"input_text": "HASTA BİLGİLERİ: Adı Soyadı: Ayşe Yılmaz, T.C. Kimlik No: 12345678901... --- ŞİKAYETLER: Şiddetli baş ağrısı ve ateş... --- DOKTOR: Dr. Elif Solmaz...", "output_text": "<!DOCTYPE html><html lang='tr'><head>...</head><body>...</body></html>"}
+{"input_text": "HASTA BİLGİLERİ: Adı Soyadı: Mehmet Kaya, T.C. Kimlik No: 98765432109... --- ŞİKAYETLER: Kuru öksürük, boğaz ağrısı... --- DOKTOR: Dr. Ahmet Çetin...", "output_text": "<!DOCTYPE html><html lang='tr'><head>...</head><body>...</body></html>"}
+
+```
+
+  - 3. Running the Fine-Tuning Process
+We use a sophisticated Python script (advanced_finetune.py) to manage the training process. This script handles everything from uploading the data to launching and monitoring the training job on Google's infrastructure.
+
+How to run it:
+```bash
+
+python advanced_finetune.py \
+    --data_file "data/egitim_verisi.jsonl" \
+    --model_id "docmed-report-generator-v1" \
+    --display_name "Docmed Report Generator v1" \
+    --epochs 15
+
+```
+
+  - 4. Monitoring Model Performance
+During training, we track the model's "loss" value across each "epoch" (a full pass through the training data). A lower loss value means a more accurate model. The graph below illustrates an ideal training session, showing that the model gets progressively better at its task without simply memorizing the data.
+
+Training Loss (Mavi): The model's error on the data it's learning from. Its consistent decrease is a good sign.
+
+Validation Loss (Yeşil): The model's error on new, unseen data. Its decrease shows the model is genuinely learning and can generalize.
+
+<img width="1600" height="1025" alt="unnamed" src="https://github.com/user-attachments/assets/9b9aa0ea-1eea-4d97-87cd-9e267e86e333" />
+<img width="512" height="512" alt="unnamed" src="https://github.com/user-attachments/assets/ac464d27-5bae-4ea9-9424-79ac0fa153cc" />
+<img width="1044" height="549" alt="image" src="https://github.com/user-attachments/assets/ee30a9ea-9002-422e-9617-be120effe4f2" />
 
 
 ## Team Members
@@ -121,10 +169,6 @@ Monitor student progress, assess case handling, and enhance learning outcomes wi
 
 ---
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/3f5a5de9-a72c-447c-8a45-7cfdf38556e5" width="45%" />
-  <img src="https://github.com/user-attachments/assets/21e111a6-e7fb-414e-922f-0a6e2e47b809" width="45%" />
-</p>
 
 # SPRINT 1 
 
